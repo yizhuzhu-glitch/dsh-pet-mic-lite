@@ -1,0 +1,18 @@
+- insert:
+    - id: dsh-pet-mic-lite
+      name: dsh-pet-mic-lite
+      config:
+        enabled: true
+        # 触发线：高出环境基准多少 dB 算「手放上去」。默认 9 即可。
+        thDb: 9
+        # 一段抚摸的结算门槛：至少 3 下，或累计接触 2 秒
+        minStrokes: 3
+        minTouchMs: 2000
+        # 手停这么久没动静，就把这一段结算成一次「摸摸」
+        sessionIdleMs: 3000
+        # 计数与日志落盘目录。留空 = 用户目录下的 .dsh-pet-mic-lite
+        # 想换个地方存就填绝对路径，例如 D:/dsh-data/pet-mic-lite
+        logDir: ''
+        # 可选的噪声校准结果 JSON（含 thDb / gateDb）。
+        # 留空 = 不读，走上面的默认阈值
+        noiseFile: ''
