@@ -1,0 +1,59 @@
+{
+  "name": "dsh-pet-mic-lite",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "description": "麦克风识别「摸摸」：手对着麦克风摸几下、停手 3 秒结算一次，把今天被摸了几次写进本地 count.json，供桌面宠物或角色读取。",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "detector.cjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "microphone",
+    "audio",
+    "desktop-pet",
+    "counter"
+  ],
+  "author": "yizhuzhu-glitch (https://github.com/yizhuzhu-glitch)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yizhuzhu-glitch/dsh-pet-mic-lite.git"
+  },
+  "homepage": "https://github.com/yizhuzhu-glitch/dsh-pet-mic-lite#readme",
+  "bugs": {
+    "url": "https://github.com/yizhuzhu-glitch/dsh-pet-mic-lite/issues"
+  },
+  "scripts": {
+    "test": "node test-count.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
