@@ -7,10 +7,12 @@
 ## 安装
 
 ```sh
-dsh plugin add dsh-pet-mic-lite
+dsh plugin add github:yizhuzhu-glitch/dsh-pet-mic-lite
 ```
 
-从源码安装（本地目录 / tgz）：
+> 还没发布到 npm，所以用包名装（`dsh plugin add dsh-pet-mic-lite`）现在会 404 —— 请用上面这条 GitHub 地址。
+
+也可以从本地目录或已下载的 tgz 安装：
 
 ```sh
 dsh plugin add /path/to/dsh-pet-mic-lite
